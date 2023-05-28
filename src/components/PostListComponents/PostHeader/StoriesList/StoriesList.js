@@ -58,12 +58,7 @@ const StoriesList = () => {
                 <View style={styles.yourStoryElement}>
                   <Entypo
                     name="circle-with-plus"
-                    style={{
-                      fontSize: 20,
-                      color: "#405de6",
-                      backgroundColor: "white",
-                      borderRadius: 100,
-                    }}
+                    style={styles.circleWithPlus}
                   />
                 </View>
               ) : null}

@@ -32,8 +32,14 @@ export default StyleSheet.create({
     borderRadius: 100,
     backgroundColor: "orange",
   },
- storyText: {
+  storyText: {
     textAlign: "center",
     fontSize: 10,
- }
+  },
+  circleWithPlus: {
+    fontSize: 20,
+    color: "#405de6",
+    backgroundColor: "white",
+    borderRadius: 100,
+  },
 });

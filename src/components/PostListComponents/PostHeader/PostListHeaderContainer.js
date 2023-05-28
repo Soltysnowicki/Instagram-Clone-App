@@ -1,4 +1,4 @@
-import { View, Image } from "react-native";
+import { View} from "react-native";
 import styles from "./PostListHeader.style";
 import PostListHeaderTop from "./PostListHeader/PostListHeaderTop";
 import StoriesList from "./StoriesList/StoriesList";

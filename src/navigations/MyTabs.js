@@ -5,6 +5,7 @@ import ActivityScreen from "../screens/ActivityScreen/ActivityScreen";
 import Ionic from "react-native-vector-icons/Ionicons";
 import ReelsScreen from "../screens/ReelsScreen/ReelsScreen";
 import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
+import { StyleSheet } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,9 +15,7 @@ const BottomTabScreen = () => {
       screenOptions={({ route }) => ({
         tabBarShowLabel: false,
         headerShown: false,
-        tabBarStyle: {
-          height: 80,
-        },
+        tabBarStyle: styles.tabBar,
 
         tabBarIcon: ({ focused, size, colour }) => {
           let iconName;
@@ -49,3 +48,9 @@ const BottomTabScreen = () => {
 };
 
 export default BottomTabScreen;
+
+export const styles = StyleSheet.create({
+  tabBar: {
+    height: 80,
+  },
+});

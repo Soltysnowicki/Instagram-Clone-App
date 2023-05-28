@@ -3,16 +3,10 @@ import styles from "../PostListHeader.style";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
-import { useFonts } from "expo-font";
+
 
 const PostListHeaderTop = () => {
-  const [loaded] = useFonts({
-    Lobster: require("../../../../../../assets/fonts/Lobster-Regular.ttf"),
-  });
-
-  if (!loaded) {
-    return null;
-  }
+  
 
   return (
     <View style={styles.postListHeaderTop}>

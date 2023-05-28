@@ -1,31 +1,28 @@
-import { StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import BottomTabScreen from "./src/components/navigations/MyTabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-const Stack = createNativeStackNavigator();
+import { View, StyleSheet } from "react-native";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import MainNavigation from "./src/navigations/MainNavigation";
+import { useFonts } from "expo-font";
+const queryClient = new QueryClient();
 
 export default function App() {
+  const [loaded] = useFonts({
+    Lobster: require("./assets/fonts/Lobster-Regular.ttf"),
+  });
+
+  if (!loaded) {
+    return null;
+  }
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="BottomTabScreen" component={BottomTabScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.rootContainer}>
+      <QueryClientProvider client={queryClient}>
+        <MainNavigation />
+      </QueryClientProvider>
+    </View>
   );
 }
 
 export const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
-    backgroundColor: "black",
-  },
-  centeredContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

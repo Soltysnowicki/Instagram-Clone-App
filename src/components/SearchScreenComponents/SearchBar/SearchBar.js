@@ -9,16 +9,12 @@ const SearchBar = ({ ıconColor, placeHolders }) => {
     <SafeAreaView>
       <View>
         <TextInput
-          placeholder={placeHolders ? "Szukaj" : "Szukaj"}
+          placeholder={"Szukaj"}
           placeholderTextColor="grey"
           style={styles.input}
         />
 
-        {ıconColor ? (
-          <Feather name="search" size={20} color="white" style={styles.icon} />
-        ) : (
-          <Feather name="search" size={20} color="grey" style={styles.icon} />
-        )}
+        <Feather name="search" size={20} color="grey" style={styles.icon} />
       </View>
     </SafeAreaView>
   );

@@ -1,12 +1,13 @@
 import { View, StyleSheet } from "react-native";
-import SearchBar from "./SearchBar/SearchBar";
-import ImageList from "./ImageList/ImageList";
+import SearchBar from "../../components/SearchScreenComponents/SearchBar/SearchBar";
+
+import ImageScreen from "../../components/SearchScreenComponents/ImageList/ImageScreen";
 
 const SearchScreen = () => {
   return (
     <View style={styles.SearchScreen}>
       <SearchBar />
-      <ImageList />
+      <ImageScreen />
     </View>
   );
 };
