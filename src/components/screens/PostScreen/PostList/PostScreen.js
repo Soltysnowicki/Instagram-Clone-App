@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { usePosts } from "../../../hooks/usePosts";
 import PostList from "./PostList";
 
-const Posts = () => {
+const PostScreen = () => {
   const { data, isError, isLoading } = usePosts();
 
   return (
@@ -23,7 +23,7 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default PostScreen;
 
 export const styles = StyleSheet.create({
   centeredContainer: {

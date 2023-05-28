@@ -3,7 +3,6 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import PostListHeaderContainer from "./PostHeader/PostListHeaderContainer";
 import PostScreen from "./PostList/PostScreen";
 
-
 const queryClient = new QueryClient();
 const PostListScreen = () => {
   return (
@@ -11,7 +10,6 @@ const PostListScreen = () => {
       <View>
         <PostListHeaderContainer />
         <PostScreen />
-
       </View>
     </QueryClientProvider>
   );
